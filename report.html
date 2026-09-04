@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Settlement reconciliation</title><style>
+:root{
+  --paper:#faf9f6; --rule:#d9d8d0; --rule-firm:#a8a79d;
+  --ink:#1c2024; --muted:#6d7278;
+  --tick:#1f6b4a; --query:#b0442c;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:#eceae4; color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.55; font-variant-numeric:tabular-nums;
+}
+.sheet{
+  max-width:60rem; margin:2.5rem auto; background:var(--paper);
+  padding:3rem 3.25rem 3.5rem; box-shadow:0 1px 3px rgba(0,0,0,.14);
+}
+h1{
+  font-family:Georgia,"Iowan Old Style",serif; font-weight:400;
+  font-size:1.85rem; margin:0 0 .2rem; letter-spacing:-.01em;
+}
+.meta{color:var(--muted); font-size:.86rem; margin:0 0 2.4rem}
+h2{
+  font-family:Georgia,"Iowan Old Style",serif; font-weight:400;
+  font-size:1.12rem; margin:2.8rem 0 .9rem;
+  padding-bottom:.4rem; border-bottom:1px solid var(--rule-firm);
+}
+table{width:100%; border-collapse:collapse}
+td,th{padding:.44rem 0; vertical-align:baseline}
+th{
+  text-align:left; font-weight:600; font-size:.78rem; color:var(--muted);
+  border-bottom:1px solid var(--rule); padding-bottom:.3rem;
+}
+.num{text-align:right; white-space:nowrap}
+.face td{border-bottom:1px solid var(--rule)}
+.face .lead{width:60%}
+.face .fig{width:22%; font-size:1.02rem}
+.face .mark{width:18%; font-size:.8rem; color:var(--muted)}
+.face tr:last-child td{
+  border-bottom:2px solid var(--rule-firm);
+  border-top:1px solid var(--rule-firm);
+  padding-top:.7rem; font-weight:600;
+}
+.indent{padding-left:1.6rem; color:var(--muted)}
+.tick{color:var(--tick)}
+.query{color:var(--query)}
+.reg td{border-bottom:1px solid var(--rule); font-size:.88rem}
+.reg .id{font-size:.82rem; color:var(--muted); white-space:nowrap}
+.reg .code{font-weight:600}
+.reg .ev{color:var(--muted); font-size:.83rem; padding-top:0; padding-bottom:.7rem}
+.reg .wrong{color:var(--query)}
+.bar{display:inline-block; height:.5rem; background:var(--tick); vertical-align:middle}
+.bar.none{background:var(--query); min-width:2px}
+.note{
+  margin-top:2.8rem; padding:1.15rem 1.35rem;
+  border-left:3px solid var(--query); background:#f4f1ec;
+}
+.note p{margin:.45rem 0; font-size:.9rem; max-width:66ch}
+.note strong{font-weight:600}
+.foot{margin-top:2.6rem; color:var(--muted); font-size:.8rem; max-width:70ch}
+@media(max-width:640px){.sheet{padding:1.75rem 1.25rem; margin:0}}
+</style></head>
+<body><div class="sheet">
+
+<h1>Settlement reconciliation</h1>
+<p class="meta">2026-07-01 to 2026-08-01 &nbsp;·&nbsp;
+prepared by the exception resolver &nbsp;·&nbsp; rate card: MDR 2%,
+GST 18% on fee, TDS 194-O 1% on marketplace orders</p>
+
+<table class="face"><tr><td class="lead"><span>Payment lines settled in the period</span></td><td class="fig num">467</td><td class="mark num "></td></tr><tr><td class="lead"><span>Settlement batches</span></td><td class="fig num">60</td><td class="mark num "></td></tr><tr><td class="lead"><span class="indent">Cleared by the rules engine</span></td><td class="fig num">48</td><td class="mark num tick">tied</td></tr><tr><td class="lead"><span class="indent">Raised as exceptions</span></td><td class="fig num">12</td><td class="mark num query">queried</td></tr><tr><td class="lead"><span class="indent">Exceptions posted automatically</span></td><td class="fig num">5</td><td class="mark num "></td></tr><tr><td class="lead"><span class="indent">Exceptions referred for sign-off</span></td><td class="fig num">7</td><td class="mark num "></td></tr><tr><td class="lead"><span>Posted in error</span></td><td class="fig num">0</td><td class="mark num tick">nil</td></tr></table>
+
+<h2>Exception register</h2>
+<table class='reg'><tr><th>Batch</th><th>Reason</th><th class='num'>Amount</th><th class='num'>Conf.</th><th class='num'>Outcome</th></tr><tr><td class='id'>setl_008</td><td class='code'><span class='wrong'>unresolvable</span><br><span class='ev'>actual: chargeback deduction</span></td><td class='num'>1,302.24</td><td class='num'>0.81</td><td class='num'><span class='query'>referred</span></td></tr><tr><td></td><td colspan='4' class='ev'>bank credit short with no supporting record in any source<br>referred: not explainable</td></tr><tr><td class='id'>setl_009</td><td class='code'>duplicate bank credit</td><td class='num'>23,037.87</td><td class='num'>0.92</td><td class='num'><span class='query'>referred</span></td></tr><tr><td></td><td colspan='4' class='ev'>two bank credits carry the same reference for one batch<br>referred: material: Rs 23,037.87</td></tr><tr><td class='id'>setl_015</td><td class='code'>utr mismatch</td><td class='num'>25,621.38</td><td class='num'>0.88</td><td class='num'><span class='query'>referred</span></td></tr><tr><td></td><td colspan='4' class='ev'>no credit on this reference, but a near-identical reference exists<br>referred: material: Rs 25,621.38</td></tr><tr><td class='id'>setl_018</td><td class='code'>unresolvable</td><td class='num'>3,840.05</td><td class='num'>0.81</td><td class='num'><span class='query'>referred</span></td></tr><tr><td></td><td colspan='4' class='ev'>bank credit short with no supporting record in any source<br>referred: not explainable; material: Rs 3,840.05</td></tr><tr><td class='id'>setl_048</td><td class='code'><span class='wrong'>unresolvable</span><br><span class='ev'>actual: chargeback deduction</span></td><td class='num'>1,989.38</td><td class='num'>0.81</td><td class='num'><span class='query'>referred</span></td></tr><tr><td></td><td colspan='4' class='ev'>bank credit short with no supporting record in any source<br>referred: not explainable</td></tr><tr><td class='id'>setl_059</td><td class='code'>timing t plus 2</td><td class='num'>40,461.10</td><td class='num'>0.93</td><td class='num'><span class='query'>referred</span></td></tr><tr><td></td><td colspan='4' class='ev'>no credit inside the period; credit lands after period end<br>referred: material: Rs 40,461.10</td></tr><tr><td class='id'>setl_060</td><td class='code'>timing t plus 2</td><td class='num'>33,793.65</td><td class='num'>0.93</td><td class='num'><span class='query'>referred</span></td></tr><tr><td></td><td colspan='4' class='ev'>no credit inside the period; credit lands after period end<br>referred: material: Rs 33,793.65</td></tr><tr><td class='id'>setl_002</td><td class='code'>partial refund netted</td><td class='num'>397.83</td><td class='num'>0.94</td><td class='num'><span class='tick'>posted</span></td></tr><tr><td></td><td colspan='4' class='ev'>payment marked partially_refunded; settled net is short by the refund</td></tr><tr><td class='id'>setl_007</td><td class='code'>full refund netted</td><td class='num'>982.99</td><td class='num'>0.96</td><td class='num'><span class='tick'>posted</span></td></tr><tr><td></td><td colspan='4' class='ev'>payment marked refunded; batch settled at nil for that line</td></tr><tr><td class='id'>setl_016</td><td class='code'>rounding paise</td><td class='num'>0.45</td><td class='num'>0.97</td><td class='num'><span class='tick'>posted</span></td></tr><tr><td></td><td colspan='4' class='ev'>sub-rupee difference, immaterial</td></tr><tr><td class='id'>setl_041</td><td class='code'>partial refund netted</td><td class='num'>435.79</td><td class='num'>0.94</td><td class='num'><span class='tick'>posted</span></td></tr><tr><td></td><td colspan='4' class='ev'>payment marked partially_refunded; settled net is short by the refund</td></tr><tr><td class='id'>setl_055</td><td class='code'>rounding paise</td><td class='num'>0.12</td><td class='num'>0.97</td><td class='num'><span class='tick'>posted</span></td></tr><tr><td></td><td colspan='4' class='ev'>sub-rupee difference, immaterial</td></tr></table>
+
+<h2>Accuracy by reason</h2>
+<table><tr><td>chargeback deduction</td><td class='num'>0/2</td><td style='padding-left:1rem'><span class='bar none' style='width:0.12rem'></span></td></tr><tr><td>partial refund netted</td><td class='num'>2/2</td><td style='padding-left:1rem'><span class='bar' style='width:9.00rem'></span></td></tr><tr><td>full refund netted</td><td class='num'>1/1</td><td style='padding-left:1rem'><span class='bar' style='width:9.00rem'></span></td></tr><tr><td>duplicate bank credit</td><td class='num'>1/1</td><td style='padding-left:1rem'><span class='bar' style='width:9.00rem'></span></td></tr><tr><td>utr mismatch</td><td class='num'>1/1</td><td style='padding-left:1rem'><span class='bar' style='width:9.00rem'></span></td></tr><tr><td>rounding paise</td><td class='num'>2/2</td><td style='padding-left:1rem'><span class='bar' style='width:9.00rem'></span></td></tr><tr><td>unresolvable</td><td class='num'>1/1</td><td style='padding-left:1rem'><span class='bar' style='width:9.00rem'></span></td></tr><tr><td>timing t plus 2</td><td class='num'>2/2</td><td style='padding-left:1rem'><span class='bar' style='width:9.00rem'></span></td></tr></table>
+
+<div class="note">
+<p><strong>Chargebacks could not be resolved: 0 of 2 correct.</strong></p>
+<p>In this dataset a chargeback reduces the bank credit with no supporting
+record anywhere, which is exactly what an unexplained shortfall looks like.
+The two are indistinguishable from settlement and bank data alone, so the
+resolver returned "unresolvable" and referred both rather than guessing.
+That is the intended behaviour, and it is why neither wrong answer reached
+the ledger.</p>
+<p>Closing this needs a fourth source: the disputes feed. It was found by
+measuring the system, not by anticipating it.</p>
+</div>
+
+<p class="foot">Accuracy is measured against a held-out answer key the
+resolver never saw. The dataset is deliberately exception-heavy at
+20% so every reason code is exercised; a real merchant
+runs nearer 2&ndash;5%. Amounts in rupees.</p>
+
+</div></body></html>

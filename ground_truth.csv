@@ -1,0 +1,61 @@
+settlement_id,utr,true_reason_code,gap_amount,explanation
+setl_001,UTR914655221101,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_002,UTR336890980656,PARTIAL_REFUND_NETTED,397.83,35% refund on pay_0014 netted off this settlement
+setl_003,UTR406575307735,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_004,UTR446680801999,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_005,UTR850726264460,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_006,UTR508678332797,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_007,UTR680958994499,FULL_REFUND_NETTED,982.99,full refund on pay_0054 netted off this settlement
+setl_008,UTR635449182375,CHARGEBACK_DEDUCTION,1302.24,chargeback of Rs 1302.24 debited against this batch
+setl_009,UTR689227460591,DUPLICATE_BANK_CREDIT,0.0,same UTR credited twice by the bank
+setl_010,UTR565081604082,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_011,UTR823355063011,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_012,UTR875427216652,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_013,UTR796181120841,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_014,UTR214533606906,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_015,UTR436509220579,UTR_MISMATCH,0.0,"bank narration carries a truncated UTR, so the join fails"
+setl_016,UTR900348631876,ROUNDING_PAISE,0.45,sub-rupee rounding difference on fee computation
+setl_017,UTR706860218144,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_018,UTR193024055640,UNRESOLVABLE,3840.05,shortfall with no supporting document - needs a human
+setl_019,UTR955156280853,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_020,UTR364684869097,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_021,UTR734648396163,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_022,UTR804735188129,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_023,UTR133304178029,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_024,UTR845502370306,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_025,UTR606070444418,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_026,UTR633356940935,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_027,UTR341781900773,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_028,UTR211585443515,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_029,UTR375098568281,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_030,UTR941588491630,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_031,UTR970967089400,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_032,UTR757475491416,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_033,UTR996079577156,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_034,UTR157609459666,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_035,UTR228475055567,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_036,UTR747842026084,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_037,UTR463312058510,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_038,UTR842395153057,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_039,UTR849754952027,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_040,UTR748487026122,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_041,UTR979505110502,PARTIAL_REFUND_NETTED,435.79,35% refund on pay_0324 netted off this settlement
+setl_042,UTR558476939238,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_043,UTR713341033639,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_044,UTR549465060984,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_045,UTR549320804913,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_046,UTR241685906927,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_047,UTR454716422315,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_048,UTR806341914182,CHARGEBACK_DEDUCTION,1989.38,chargeback of Rs 1989.38 debited against this batch
+setl_049,UTR763596288927,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_050,UTR245220443325,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_051,UTR631101638339,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_052,UTR254917689778,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_053,UTR566699473017,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_054,UTR922475007249,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_055,UTR366742651064,ROUNDING_PAISE,0.12,sub-rupee rounding difference on fee computation
+setl_056,UTR950194325949,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_057,UTR755476469892,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_058,UTR760045839791,FEE_GST_TDS_GAP,0.0,gross vs bank gap is entirely MDR + GST + TDS
+setl_059,UTR715509967407,TIMING_T_PLUS_2,0.0,bank credit landed 3 days late; falls outside the period
+setl_060,UTR514882014361,TIMING_T_PLUS_2,0.0,bank credit landed 3 days late; falls outside the period
