@@ -3,7 +3,7 @@
 **Razorpay AI Buildathon — Track 04, AI Finance Controller**
 
 Reconciliation is mostly solved. The exceptions are not. This resolves the exceptions.
-
+![Architecture](architecture.png)
 ---
 
 ## The problem
